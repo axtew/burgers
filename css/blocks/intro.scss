@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'LifeHack';
+    src: url('../../fonts/lifehack_medium-webfont.woff2') format('woff2'),
+         url('../../fonts/lifehack_medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gagalin';
+    src: url('../../fonts/gagalin-regular-webfont.woff2') format('woff2'),
+         url('../../fonts/gagalin-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  min-height: 550px;
+  background: url('../../img/bg.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.sidebar {
+  top: 100px;
+  right: 40px;
+  position: fixed;
+  display: block;
+}
+
+.sidebar__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar__item {
+  width: 14px;
+  height: 14px;
+  margin: 10px 0;
+  &--active {
+    border: 1px solid #fff;
+    border-radius: 50%;
+  }
+}
+
+.header {
+  width: 90%;
+  margin-top: 10px;
+  // border: 2px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation {
+  margin-left: auto;
+  width: 65%;
+}
+
+.navigation__list {
+  font-family: 'Ubuntu';
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.navigation__item {
+  font-size: 13px;
+  font-weight: 500;
+
+  &:before {
+    //content: "•";
+    color: white;
+    margin: auto;
+  }
+
+  &:first-child {
+    &:before {display: none;}
+  }
+
+  &:last-child {
+    &:before {display: none;}
+    flex-grow: 0;
+  }
+}
+
+.navigation__item--button {
+  background-color: #e45028;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.navigation__text {
+  text-decoration: none;
+  color: #fff;
+}
+
+.intro__cont {
+  display: flex;
+  align-items: flex-end;
+}
+
+.intro__img {
+  margin-right: 25px;
+  position: relative;
+  &::after {
+    content: "";
+    background-image: url('../../img/icons/drops.svg');
+    z-index: 10;
+    width: 450px;
+    height: 241px;
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: -30px;
+  }
+}
+
+.intro__text {
+  margin-bottom: 50px;
+}
+
+.intro__text-yellow {
+  font-family: 'Gagalin', Arial, sans-serif;
+  font-size: 72px;
+  text-transform: uppercase;
+  color: #f9b43b;
+  line-height: 85px;
+  margin-bottom: 15px;
+}
+
+.intro__text-white {
+  font-family: 'LifeHack', Arial, sans-serif;
+  font-size: 65px;
+  color: white;
+  text-transform: lowercase;
+  line-height: 60px;
+}
+
+.arrow {
+  margin-bottom: 20px;
+}
