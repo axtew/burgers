@@ -1,0 +1,18 @@
+.sidebar {
+  top: 100px;
+  right: 40px;
+  position: fixed;
+  display: block; }
+
+.sidebar__list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.sidebar__item {
+  width: 14px;
+  height: 14px;
+  margin: 10px 0; }
+  .sidebar__item--active {
+    border: 1px solid #fff;
+    border-radius: 50%; }

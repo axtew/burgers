@@ -1,0 +1,105 @@
+.intro {
+  background: url('../img/bg.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.header {
+  width: 100%;
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  margin-right: auto;
+}
+
+.navigation {
+  margin-right: 15px;
+}
+
+.navigation__list {
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__item {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 500;
+
+  &:before {
+    content: "•";
+    color: white;
+    margin: 0 11px;
+  }
+
+  &:first-child {
+    &:before {display: none;}
+  }
+}
+
+.navigation__text {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  transition: .5s;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.header-btn__link {
+  background-color: $orange;
+  &:hover {
+    background-color: darken($orange, 7%);
+  }
+}
+
+.intro__cont {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro__img {
+  margin-right: 25px;
+  position: relative;
+  &::after {
+    content: "";
+    background-image: url('../img/icons/drops.svg');
+    z-index: 10;
+    width: 450px;
+    height: 241px;
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: -30px;
+  }
+}
+
+.intro__description {
+  margin-top: 60px;
+}
+
+.intro__title {
+  color: $yellow;
+  margin-bottom: 15px;
+}
+
+.intro__description-text {
+  font-family: 'LifeHack', Arial, sans-serif;
+  font-size: 65px;
+  color: white;
+  text-transform: lowercase;
+  line-height: 60px;
+}
+
+.arrow {
+  margin-bottom: 20px;
+}

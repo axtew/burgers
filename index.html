@@ -4,104 +4,91 @@
   <meta charset="UTF-8">
   <title>Burgers</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
 
   <!--<link rel="shortcut icon" href="./img/logo/intro-logo.png" type="image/x-icon">-->
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500&amp;subset=cyrillic" rel="stylesheet">
 
-  <link rel="stylesheet" href="./css/layout/normalize.css">
-  <link rel="stylesheet" href="./css/blocks/intro.css">
-  <!--<link rel="stylesheet" href="css/main.css">-->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
 
 </head>
 
 <body>
   <div class="wrapper">
-    <section class="intro">
-      <div class="container">
+    <div class="maincontent">
+      <section class="section intro">
+        <div class="container intro__container">
 
-        <aside class="sidebar">
-          <ul class="sidebar__list">
-            <li class="sidebar__item sidebar__item--active"><svg><circle r="3" cx="6" cy="6" fill="white"/></svg></li>
-            <li class="sidebar__item"><svg><circle r="3" cx="6" cy="6" fill="white"/></svg></li>
-            <li class="sidebar__item"><svg><circle r="3" cx="6" cy="6" fill="white"/></svg></li>
-            <li class="sidebar__item"><svg><circle r="3" cx="6" cy="6" fill="white"/></svg></li>
-            <li class="sidebar__item"><svg><circle r="3" cx="6" cy="6" fill="white"/></svg></li>
-            <li class="sidebar__item"><svg><circle r="3" cx="6" cy="6" fill="white"/></svg></li>
-            <li class="sidebar__item"><svg><circle r="3" cx="6" cy="6" fill="white"/></svg></li>
-            <li class="sidebar__item"><svg><circle r="3" cx="6" cy="6" fill="white"/></svg></li>
-          </ul>
-        </aside>
-
-        <header class="header">
-          <div class="logo">
-            <img src="img/icons/logo.svg" alt="logo" class="logo">
-          </div>
-
-          <nav class="navigation">
-            <ul class="navigation__list">
-              <li class="navigation__item">
-                <a href="we/we.html" class="navigation__text">О нас</a>
-              </li>
-              <li class="navigation__item">
-                <span>•</span>
-              </li>
-              <li class="navigation__item">
-                <a href="#" class="navigation__text">Бургеры</a>
-              </li>
-              <li class="navigation__item">
-                <span>•</span>
-              </li>
-              <li class="navigation__item">
-                <a href="#" class="navigation__text">Команда</a>
-              </li>
-              <li class="navigation__item">
-                <span>•</span>
-              </li>
-              <li class="navigation__item">
-                <a href="#" class="navigation__text">Меню</a>
-              </li>
-              <li class="navigation__item">
-                <span>•</span>
-              </li>
-              <li class="navigation__item">
-                <a href="#" class="navigation__text">Отзывы</a>
-              </li>
-              <li class="navigation__item">
-                <span>•</span>
-              </li>
-              <li class="navigation__item">
-                <a href="#" class="navigation__text">Контакты</a>
-              </li>
-              <li class="navigation__item navigation__item--button">
-                <a href="#" class="navigation__text">Заказать</a>
-              </li>
-            </ul>
-          </nav>
-
-        </header>
-
-        <main class="intro__cont">
-          <div class="intro__img">
-            <img src="./img/burger.png" alt="burger" class="intro__burger">
-          </div>
-          <div class="intro__text">
-            <div class="intro__text-yellow">
-              Мы делаем
+          <header class="header">
+            <div class="header__logo">
+              <a href="#" class="logo"><img src="img/icons/logo.svg" alt="logo" class="logo__img"></a>
             </div>
-            <div class="intro__text-white">
-              натуральные<br>
-              бургеры
+
+            <nav class="navigation">
+              <ul class="navigation__list">
+                <li class="navigation__item">
+                  <a href="we.html" class="navigation__text">О нас</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__text">Бургеры</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__text">Команда</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__text">Меню</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="reviews.html" class="navigation__text">Отзывы</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__text">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="btn header-btn">
+              <a href="#" class="btn__link header-btn__link">Заказать</a>
+            </div>
+
+          </header>
+
+          <div class="intro__cont">
+            <div class="intro__img">
+              <img src="./img/burger.png" alt="burger" class="intro__burger">
+            </div>
+            <div class="intro__description">
+              <div class="section__title intro__title">
+                Мы делаем
+              </div>
+              <div class="intro__description-text">
+                натуральные<br>
+                бургеры
+              </div>
             </div>
           </div>
-        </main>
 
-        <figure class="arrow">
-          <img src="img/icons/arrow-scroll.svg" alt="" class="arrow__img">
-        </figure>
+          <figure class="arrow"><img src="img/icons/arrow-scroll.svg" alt="" class="arrow__img"></figure>
 
-      </div>
-    </section>
+        </div>
+      </section>
+    </div>
   </div>
+
+  <aside class="sidebar">
+    <ul class="sidebar__list">
+      <li class="sidebar__item sidebar__item--active"><svg><circle r="3" cx="6" cy="6" fill="white"/></svg></li>
+      <li class="sidebar__item"><svg><circle r="3" cx="6" cy="6" fill="white"/></svg></li>
+      <li class="sidebar__item"><svg><circle r="3" cx="6" cy="6" fill="white"/></svg></li>
+      <li class="sidebar__item"><svg><circle r="3" cx="6" cy="6" fill="white"/></svg></li>
+      <li class="sidebar__item"><svg><circle r="3" cx="6" cy="6" fill="white"/></svg></li>
+      <li class="sidebar__item"><svg><circle r="3" cx="6" cy="6" fill="white"/></svg></li>
+      <li class="sidebar__item"><svg><circle r="3" cx="6" cy="6" fill="white"/></svg></li>
+      <li class="sidebar__item"><svg><circle r="3" cx="6" cy="6" fill="white"/></svg></li>
+    </ul>
+  </aside>
+
 </body>
 </html>
