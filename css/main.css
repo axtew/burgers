@@ -294,7 +294,11 @@ ul {
   -ms-flex-positive: 1;
   flex-grow: 1;
   -webkit-filter: grayscale(1);
-  filter: grayscale(1); }
+  filter: grayscale(1);
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  background-blend-mode: multiply; }
   .reviews__item:hover {
     background-color: #b5babd; }
     .reviews__item:hover .reviews__name,
@@ -336,9 +340,9 @@ ul {
   line-height: 28px;
   margin-bottom: 15px;
   opacity: 0;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s; }
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
 
 .reviews__text {
   font-size: 14px;
@@ -346,9 +350,9 @@ ul {
   font-weight: 300;
   margin-bottom: 18px;
   opacity: 0;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s; }
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
 
 .reviews-btn__link {
   background-color: #2f3234;
