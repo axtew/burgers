@@ -1,7 +1,6 @@
 .reviews__container {
   min-width: 1100px;
   width: 100%;
-
 }
 
 .reviews__list {
@@ -22,8 +21,8 @@
   &:hover {
     background-color: rgb(181, 186, 189);
 
-    .reviews__name,
-    .reviews__text,
+    span,
+    p,
     .reviews-btn__link {
       opacity: 1;
     }
@@ -72,25 +71,26 @@
 
 .reviews__cont {
   margin: 0 20px;
-}
 
-.reviews__name {
-  margin-top: 40px;
-  font-family: 'Gagalin', Arial, sans-serif;
-  font-size: 14px;
-  line-height: 28px;
-  margin-bottom: 15px;
-  opacity: 0;
-  transition: .5s;
-}
+  span {
+    display: block;
+    margin-top: 40px;
+    font-family: 'Gagalin', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 28px;
+    margin-bottom: 15px;
+    opacity: 0;
+    transition: .5s;
+  }
 
-.reviews__text {
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 300;
-  margin-bottom: 18px;
-  opacity: 0;
-  transition: .5s;
+  p {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    margin-bottom: 18px;
+    opacity: 0;
+    transition: .5s;
+  }
 }
 
 .reviews-btn__link {
