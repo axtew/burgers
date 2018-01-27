@@ -1,11 +1,11 @@
 .intro {
-  background: url('../img/bg.jpg') no-repeat center;
+  background: url('../img/bg/intro-bg.jpg') no-repeat center;
   background-size: cover;
 }
 
 .header {
   width: 100%;
-  margin-top: 8px;
+  margin-top: rem(8px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,7 +16,7 @@
 }
 
 .navigation {
-  margin-right: 15px;
+  margin-right: rem(15px);
 }
 
 .navigation__list {
@@ -29,13 +29,13 @@
   display: inline-block;
   vertical-align: middle;
   white-space: nowrap;
-  font-size: 13px;
+  font-size: rem(13px);
   font-weight: 500;
 
   &:before {
     content: "•";
     color: white;
-    margin: 0 11px;
+    margin: 0 rem(11px);
   }
 
   &:first-child {
@@ -53,7 +53,7 @@
   }
 }
 
-.header-btn__link {
+.header__btn-link {
   background-color: $orange;
   &:hover {
     background-color: darken($orange, 7%);
@@ -68,38 +68,31 @@
 }
 
 .intro__img {
-  margin-right: 25px;
+  margin-right: rem(25px);
   position: relative;
-  &::after {
-    content: "";
-    background-image: url('../img/icons/drops.svg');
-    z-index: 10;
-    width: 450px;
-    height: 241px;
-    display: block;
-    position: absolute;
-    top: 70px;
-    left: -30px;
-  }
+}
+
+.intro__burger {
+  max-width: 100%;
 }
 
 .intro__description {
-  margin-top: 60px;
+  margin-top: rem(60px);
 }
 
 .intro__title {
   color: $yellow;
-  margin-bottom: 15px;
+  margin-bottom: rem(15px);
 }
 
 .intro__description-text {
   font-family: 'LifeHack', Arial, sans-serif;
-  font-size: 65px;
+  font-size: rem(65px);
   color: white;
   text-transform: lowercase;
-  line-height: 60px;
+  line-height: rem(60px);
 }
 
 .arrow {
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
 }

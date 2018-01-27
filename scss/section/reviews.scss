@@ -16,15 +16,22 @@
   color: #fff;
   flex-grow: 1;
   filter: grayscale(1);
-  transition: .5s;
+  transition: .7s;
   background-blend-mode: multiply;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   &:hover {
     background-color: rgb(181, 186, 189);
 
-    .reviews__name,
-    .reviews__text,
-    .reviews-btn__link {
-      opacity: 1;
+    .reviews__cont {
+      span,
+      p,
+      .reviews__btn-link {
+        opacity: 1;
+      }
     }
   }
 }
@@ -70,32 +77,33 @@
 }
 
 .reviews__cont {
-  margin: 0 20px;
+  width: 85%;
+  transition: .7s;
+
+
+  span {
+    display: block;
+    font-family: 'Gagalin', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 28px;
+    margin-bottom: 15px;
+    opacity: 0;
+    transition: .5s;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: .5s;
+  }
 }
 
-.reviews__name {
-  margin-top: 40px;
-  font-family: 'Gagalin', Arial, sans-serif;
-  font-size: 14px;
-  line-height: 28px;
-  margin-bottom: 15px;
-  opacity: 0;
-  transition: .5s;
-}
-
-.reviews__text {
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 300;
-  margin-bottom: 18px;
-  opacity: 0;
-  transition: .5s;
-}
-
-.reviews-btn__link {
+.reviews__btn-link {
   background-color: $dark;
   opacity: 0;
-  transition: .3s;
   &:hover {
     background-color: darken($dark, 7%);
   }
