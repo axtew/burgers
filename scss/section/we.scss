@@ -9,18 +9,23 @@
 }
 
 .we__title {
-  font-family: 'Gagalin', Arial, sans-serif;
-  font-size: 72px;
   margin-bottom: 15px;
 }
 
 .we__list {
   display: flex;
   justify-content: space-between;
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .we__item {
-  width: 32%;
+  width: 31%;
+  @include phones {
+    display: flex;
+    width: 100%;
+  }
 }
 
 .we__image {
@@ -46,11 +51,12 @@
 }
 
 .we__text {
+  text-align: center;
+
   span {
     font-family: 'LifeHack', Arial, sans-serif;
     display: block;
     font-size: 24px;
-    text-align: center;
     color: #2f3234;
     margin-bottom: 5px;
   }
@@ -58,9 +64,13 @@
   p {
     font-family: 'Ubuntu', Arial, sans-serif;
     font-weight: 300;
-    text-align: center;
     font-size: 14px;
     line-height: 24px;
-    color: #2f3234;
+    color: #757879;
+  }
+
+  @include phones {
+    width: 70%;
+    text-align: left;
   }
 }

@@ -8,11 +8,20 @@
 
 .form__title {
   color: $yellow;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
+
+  @include phones {
+    text-align: center;
+    margin-bottom: 15px;
+  }
 }
 
 .form__inner {
   display: flex;
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .form__left,
@@ -20,28 +29,69 @@
   width: 50%;
   display: flex;
   flex-direction: column;
+  @include tablets {
+    flex-direction: column;
+    width: 65%;
+  }
+
+  @include phones {
+    width: 95%;
+  }
 }
 
 .form__left {
   margin-right: 20px;
+  @include tablets {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  @include phones {
+    margin-bottom: 10px;
+  }
 }
 
 .form__row {
   display: flex;
   margin-bottom: 15px;
 
+  @include phones {
+    margin-bottom: 10px;
+  }
+
+  &--textarea,
+  &--check {
+    margin-bottom: 20px;
+
+    @include tablets {
+      margin-bottom: 40px;
+    }
+  }
+
+  &--textarea {
+    @include phones {
+      margin-bottom: 20px;
+    }
+  }
+
+  &--radio {
+    margin-bottom: 25px;
+  }
+
+  &--radio,
+  &--check,
+  &--buttons {
+    @include phones {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  }
+
+
   &:last-child {
     margin-bottom: 0;
   }
-}
-
-.form__row--textarea,
-.form__row--check {
-  margin-bottom: 20px;
-}
-
-.form__row--radio {
-  margin-bottom: 25px;
 }
 
 .form__input {
@@ -49,6 +99,10 @@
   display: flex;
   flex-direction: column;
   margin-right: 20px;
+
+  @include phones {
+    margin-right: 10px;
+  }
 
   &:last-child {
     margin-right: 0;

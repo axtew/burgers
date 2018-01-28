@@ -3,73 +3,36 @@
   background-size: cover;
 }
 
-.header {
-  width: 100%;
-  margin-top: rem(8px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header__logo {
-  margin-right: auto;
-}
-
-.navigation {
-  margin-right: rem(15px);
-}
-
-.navigation__list {
-  text-transform: uppercase;
-  margin: 0;
-  padding: 0;
-}
-
-.navigation__item {
-  display: inline-block;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-size: rem(13px);
-  font-weight: 500;
-
-  &:before {
-    content: "•";
-    color: white;
-    margin: 0 rem(11px);
-  }
-
-  &:first-child {
-    &:before {display: none;}
-  }
-}
-
-.navigation__text {
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  transition: .5s;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-.header__btn-link {
-  background-color: $orange;
-  &:hover {
-    background-color: darken($orange, 7%);
-  }
-}
-
 .intro__cont {
   display: flex;
   flex-grow: 1;
   align-items: center;
   justify-content: center;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.intro__img,
+.intro__description {
+  width: 50%;
+
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .intro__img {
   margin-right: rem(25px);
-  position: relative;
+
+  @include tablets {
+    margin-right: 0;
+  }
+
+  @include phones {
+    width: 80%;
+  }
 }
 
 .intro__burger {
@@ -78,11 +41,20 @@
 
 .intro__description {
   margin-top: rem(60px);
+
+  @include tablets {
+    text-align: center;
+    margin-top: 0;
+  }
 }
 
 .intro__title {
   color: $yellow;
   margin-bottom: rem(15px);
+
+  @include phones {
+    font-size: 61px;
+  }
 }
 
 .intro__description-text {
@@ -91,8 +63,12 @@
   color: white;
   text-transform: lowercase;
   line-height: rem(60px);
+
+  @include phones {
+    font-size: 50px;
+  }
 }
 
 .arrow {
-  margin-bottom: rem(20px);
+  margin-bottom: rem(40px);
 }

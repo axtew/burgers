@@ -1,8 +1,3 @@
-.reviews__container {
-  min-width: 1100px;
-  width: 100%;
-}
-
 .reviews__list {
   display: flex;
   flex-wrap: wrap;
@@ -22,6 +17,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-repeat: no-repeat;
+
+  @include tablets {
+    width: 50%;
+    text-align: center;
+  }
+
+  @include phones {
+    background-size: auto 200%;
+  }
 
   &:hover {
     background-color: rgb(181, 186, 189);
@@ -37,49 +42,57 @@
 }
 
 .reviews__item--1 {
-  background: url('../img/content/1.jpg') no-repeat center;
+  background-position: 50% 25%;
   background-size: cover;
 }
 
 .reviews__item--2 {
-  background: url('../img/content/2.jpg') no-repeat 60% 20%;
-  background-size: cover;
+  background-position: 60% 10%;
 }
 
 .reviews__item--3 {
-  background: url('../img/content/3.jpg') no-repeat 50% 10%;
-  background-size: cover;
+  background-position: 50% 10%;
 }
 
 .reviews__item--4 {
-  background: url('../img/content/4.jpg') no-repeat 100% 35%;
-  background-size: cover;
+  background-position: 100% 35%;
 }
 
 .reviews__item--5 {
-  background: url('../img/content/5.jpg') no-repeat 5% 0%;
-  background-size: cover;
+  background-position: 5% 0%;
 }
 
 .reviews__item--6 {
-  background: url('../img/content/6.jpg') no-repeat 65% 0%;
-  background-size: cover;
+  background-position: 65% 0%;
+  
+  @include phones {
+    background-size: auto 110%;
+  }
 }
 
 .reviews__item--7 {
-  background: url('../img/content/7.jpg') no-repeat 40% 50%;
-  background-size: cover;
+  background-position: 40% 50%;
+
+  @include phones {
+    background-size: auto 110%;
+  }
 }
 
 .reviews__item--8 {
-  background: url('../img/content/8.jpg') no-repeat 80% 50%;
-  background-size: cover;
+  background-position: 80% 50%;
+
+  @include phones {
+    background-size: auto 110%;
+  }
 }
 
 .reviews__cont {
   width: 85%;
   transition: .7s;
 
+  @include tablets {
+    width: 75%;
+  }
 
   span {
     display: block;
@@ -89,6 +102,15 @@
     margin-bottom: 15px;
     opacity: 0;
     transition: .5s;
+
+    @include tablets {
+      margin-bottom: 5px;
+    }
+
+    @include phones {
+      font-size: 24px;
+      margin-bottom: 25px;
+    }
   }
 
   p {
@@ -98,12 +120,23 @@
     margin-bottom: 20px;
     opacity: 0;
     transition: .5s;
+
+    @include phones {
+      display: none;
+      font-size: 24px;
+      line-height: 28px;
+    }
   }
 }
 
 .reviews__btn-link {
   background-color: $dark;
   opacity: 0;
+
+  @include tablets {
+    margin-bottom: 15px;
+  }
+
   &:hover {
     background-color: darken($dark, 7%);
   }
