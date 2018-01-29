@@ -1,0 +1,76 @@
+.we {
+  background: url('../img/bg/we-bg.jpg') no-repeat center;
+  background-size: cover;
+  color: $dark;
+}
+
+.we__container {
+  justify-content: center;
+}
+
+.we__title {
+  margin-bottom: 15px;
+}
+
+.we__list {
+  display: flex;
+  justify-content: space-between;
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.we__item {
+  width: 31%;
+  @include phones {
+    display: flex;
+    width: 100%;
+  }
+}
+
+.we__image {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  background: #f89513;
+  margin-bottom: 30px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.we__image--meat {
+  background: url('../img/icons/meat.svg') no-repeat center;
+}
+
+.we__image--hand {
+  background: url('../img/icons/hand.svg') no-repeat center;
+}
+
+.we__image--natural {
+  background: url('../img/icons/natural.svg') no-repeat center;
+}
+
+.we__text {
+  text-align: center;
+
+  span {
+    font-family: 'LifeHack', Arial, sans-serif;
+    display: block;
+    font-size: 24px;
+    color: #2f3234;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-family: 'Ubuntu', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: #757879;
+  }
+
+  @include phones {
+    width: 70%;
+    text-align: left;
+  }
+}
