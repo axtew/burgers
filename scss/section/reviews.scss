@@ -18,6 +18,7 @@
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
+  background-size: cover;
 
   @include tablets {
     width: 50%;
@@ -43,7 +44,6 @@
 
 .reviews__item--1 {
   background-position: 50% 25%;
-  background-size: cover;
 }
 
 .reviews__item--2 {
@@ -64,7 +64,7 @@
 
 .reviews__item--6 {
   background-position: 65% 0%;
-  
+
   @include phones {
     background-size: auto 110%;
   }
