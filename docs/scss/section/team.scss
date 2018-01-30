@@ -68,6 +68,14 @@
       }
     }
   }
+
+  &:last-child {
+    margin-bottom: 0;
+
+    .team__preview {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .team__preview {

@@ -24,6 +24,24 @@
   }
 }
 
+.footer__left,
+.footer__right {
+  width: 50%;
+
+  @include tablets {
+    width: 100%;
+  }
+}
+
+.footer__left {
+  text-align: left;
+
+  @include phones {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
 .address {
   font-weight: 300;
   margin-bottom: 5px;
@@ -44,13 +62,11 @@
   }
 }
 
-.footer__left {
-  margin-right: auto;
+.footer__right {
+  text-align: right;
 
   @include phones {
-    margin-right: 0;
     text-align: center;
-    margin-bottom: 10px;
   }
 }
 
