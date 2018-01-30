@@ -774,7 +774,8 @@ footer {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-size: cover; }
   @media screen and (max-width: 768px) {
     .reviews__item {
       width: 50%;
@@ -790,8 +791,7 @@ footer {
       opacity: 1; }
 
 .reviews__item--1 {
-  background-position: 50% 25%;
-  background-size: cover; }
+  background-position: 50% 25%; }
 
 .reviews__item--2 {
   background-position: 60% 10%; }
@@ -1173,7 +1173,7 @@ footer {
     content: '';
     width: 10px;
     height: 10px;
-    background-image: url("../../img/icons/phone.svg");
+    background-image: url("../img/icons/phone.svg");
     display: inline-block;
     margin-right: 10px; }
 
