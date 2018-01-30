@@ -1154,7 +1154,7 @@ footer {
     content: '';
     width: 10px;
     height: 10px;
-    background-image: url(../../img/icons/phone.svg);
+    background-image: url("../../img/icons/phone.svg");
     display: inline-block;
     margin-right: 10px; }
 
@@ -1184,5 +1184,3 @@ footer {
   transition: .3s; }
   .social__icon:hover {
     fill: #fff; }
-
-/*# sourceMappingURL=main.css.map */
