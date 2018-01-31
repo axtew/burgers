@@ -12,7 +12,6 @@
   position: absolute;
   right: 0;
   top: 0;
-
   @include tablets {
     width: 100%;
     justify-content: center;
@@ -24,7 +23,6 @@
   color: $yellow;
   margin-top: 90px;
   margin-bottom: 25px;
-
   @include tablets {
     margin-top: 0;
   }
@@ -36,7 +34,6 @@
   margin-bottom: 20px;
   transition: .5s;
   cursor: pointer;
-
   @include tablets {
     margin-top: 0;
     display: flex;
@@ -62,7 +59,6 @@
       height: auto;
       max-height: 2000px;
       display: flex;
-
       @include tablets {
         flex-direction: column;
         justify-content: center;

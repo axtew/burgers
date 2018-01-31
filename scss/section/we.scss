@@ -2,9 +2,6 @@
   background: url('../img/bg/we-bg.jpg') no-repeat center;
   background-size: cover;
   color: $dark;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .we__container {
@@ -12,19 +9,23 @@
 }
 
 .we__title {
-  font-family: 'Gagalin', Arial, sans-serif;
-  font-size: 72px;
-  padding: 0;
-  margin-bottom: 55px;
+  margin-bottom: 15px;
 }
 
 .we__list {
   display: flex;
   justify-content: space-between;
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .we__item {
-  width: 300px;
+  width: 31%;
+  @include phones {
+    display: flex;
+    width: 100%;
+  }
 }
 
 .we__image {
@@ -32,7 +33,7 @@
   width: 100px;
   height: 100px;
   background: #f89513;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -50,20 +51,26 @@
 }
 
 .we__text {
+  text-align: center;
+
   span {
     font-family: 'LifeHack', Arial, sans-serif;
     display: block;
     font-size: 24px;
-    text-align: center;
     color: #2f3234;
+    margin-bottom: 5px;
   }
 
   p {
     font-family: 'Ubuntu', Arial, sans-serif;
     font-weight: 300;
-    text-align: center;
     font-size: 14px;
     line-height: 24px;
-    color: #2f3234;
+    color: #757879;
+  }
+
+  @include phones {
+    width: 70%;
+    text-align: left;
   }
 }
