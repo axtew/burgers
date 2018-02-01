@@ -603,7 +603,7 @@ footer {
   .composition__list .salad:before {
     background-image: url("../img/icons/salad.svg"); }
   .composition__list .sauce:before {
-    background-image: url("../../img/icons/sauce.svg"); }
+    background-image: url("../img/icons/sauce.svg"); }
   .composition__list .cucumber:before {
     background-image: url("../img/icons/cucumber.svg"); }
   .composition__list .cheese:before {
