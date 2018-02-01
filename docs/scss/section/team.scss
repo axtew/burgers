@@ -12,7 +12,6 @@
   position: absolute;
   right: 0;
   top: 0;
-
   @include tablets {
     width: 100%;
     justify-content: center;
@@ -35,7 +34,6 @@
   margin-bottom: 20px;
   transition: .5s;
   cursor: pointer;
-
   @include tablets {
     margin-top: 0;
     display: flex;
