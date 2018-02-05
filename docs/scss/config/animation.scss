@@ -5,3 +5,8 @@
   75% { transform: rotate(-35deg); }
   to { transform: rotate(0deg); }
 }
+
+@keyframes acco-text {
+  75% {opacity: 0; }
+  to { opacity: 1; }
+}
