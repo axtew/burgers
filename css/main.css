@@ -33,6 +33,18 @@
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); } }
 
+@-webkit-keyframes acco-text {
+  75% {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes acco-text {
+  75% {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 @font-face {
   font-family: 'LifeHack';
   src: url("../fonts/lifehack_medium-webfont.woff2") format("woff2"), url("../fonts/lifehack_medium-webfont.woff") format("woff");
@@ -883,15 +895,18 @@ footer {
 .accordeon-horizontal {
   position: absolute;
   margin-left: auto;
-  max-width: 71%;
-  width: 71%;
+  max-width: 780px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0; }
+  bottom: 0;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
   @media screen and (max-width: 768px) {
     .accordeon-horizontal {
       max-width: 100%;
@@ -901,22 +916,14 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
   cursor: pointer; }
-  @media screen and (max-width: 768px) {
-    .menu__item:first-child {
-      margin-left: auto; } }
+  .menu__item:first-child {
+    margin-left: auto; }
   .menu__item:hover .menu__preview {
     color: #f8b43a; }
-  .menu__item:hover .menu__hidden {
-    width: 20px;
-    max-width: 20px; }
-    @media screen and (max-width: 768px) {
-      .menu__item:hover .menu__hidden {
-        width: 0;
-        max-width: 0; } }
   .menu__item--active {
     cursor: pointer; }
     @media screen and (max-width: 480px) {
@@ -934,9 +941,9 @@ footer {
     .menu__item--active .menu__hidden {
       width: auto;
       max-width: 2000px; }
-    .menu__item--active:hover .menu__hidden {
-      width: auto;
-      max-width: 2000px; }
+    .menu__item--active .menu__text p {
+      -webkit-animation: acco-text .7s linear forwards;
+      animation: acco-text .7s linear forwards; }
 
 .menu__preview {
   display: -webkit-box;
@@ -998,18 +1005,21 @@ footer {
         width: 35px; } }
 
 .menu__hidden {
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
-  width: 0;
   max-width: 0;
   overflow: hidden;
   background-color: #343334;
-  opacity: 0.93; }
+  opacity: 0.93;
+  -webkit-transition: .6s;
+  -o-transition: .6s;
+  transition: .6s; }
 
 .menu__text p {
   margin: 60px 35px;
-  line-height: 24px; }
+  line-height: 24px;
+  opacity: 0;
+  -webkit-transition: opacity .2s;
+  -o-transition: opacity .2s;
+  transition: opacity .2s; }
 
 .reviews__list {
   display: -webkit-box;
