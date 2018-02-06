@@ -37,7 +37,6 @@
 
 .menu__item {
   display: flex;
-  transition: 2s;
   cursor: pointer;
 
   &:first-child {
@@ -81,13 +80,12 @@
     }
 
     .menu__hidden {
-      width: auto;
-      max-width: 2000px;
+      width: 540px;
     }
 
     .menu__text {
       p {
-        animation: acco-text .7s linear forwards;
+        animation: acco-text .8s linear forwards;
       }
     }
   }
@@ -154,11 +152,11 @@
 }
 
 .menu__hidden {
-  max-width: 0;
+  width: 0;
   overflow: hidden;
   background-color: #343334;
   opacity: 0.93;
-  transition: .6s;
+  transition: width .6s;
 }
 
 .menu__text {
