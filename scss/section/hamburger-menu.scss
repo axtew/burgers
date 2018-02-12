@@ -1,18 +1,48 @@
-.main {
+.hamburger-menu__list {
   display: none;
+  z-index: 1000;
 
   @include tablets {
     display: inline-block;
+    cursor: pointer;
   }
 
-  .item {
+  .hamburger-menu__item {
     width: 24px;
     height: 4px;
     margin-bottom: 5px;
     border-radius: 5px;
     background-color: #fff;
+    transition: .5s;
+
     &:last-child {
       margin-bottom: 0;
     }
   }
+}
+
+.hamburger-menu__list--active {
+
+  .hamburger-menu__item {
+    transform-origin: left;
+    width: 26px;
+
+    &:first-child {
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:last-child {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.navigation__list--active {
+  z-index: 0;
+  opacity: 1;
+  overflow-y: hidden;
 }
