@@ -20,8 +20,8 @@
 .accordeon-horizontal {
   position: absolute;
   margin-left: auto;
-  max-width: 71%;
-  width: 71%;
+  max-width: 780px;
+  width: 100%;
   display: flex;
   top: 0;
   left: 0;
@@ -36,28 +36,25 @@
 
 .menu__item {
   display: flex;
-  transition: .5s;
   cursor: pointer;
 
   &:first-child {
-    @include tablets {
-      margin-left: auto;
-    }
+    margin-left: auto;
   }
 
   &:hover {
     .menu__preview {
       color: $yellow;
     }
-    .menu__hidden {
-      width: 20px;
-      max-width: 20px;
-
-      @include tablets {
-        width: 0;
-        max-width: 0;
-      }
-    }
+    // .menu__hidden {
+    //   width: 20px;
+    //   max-width: 20px;
+    //
+    //   @include tablets {
+    //     width: 0;
+    //     max-width: 0;
+    //   }
+    // }
   }
 
   &--active {
@@ -82,14 +79,12 @@
     }
 
     .menu__hidden {
-      width: auto;
-      max-width: 2000px;
+      width: 540px;
     }
 
-    &:hover {
-      .menu__hidden {
-        width: auto;
-        max-width: 2000px;
+    .menu__text {
+      p {
+        animation: acco-text .8s linear forwards;
       }
     }
   }
@@ -156,17 +151,18 @@
 }
 
 .menu__hidden {
-  transition: .5s;
   width: 0;
-  max-width: 0;
   overflow: hidden;
   background-color: #343334;
   opacity: 0.93;
+  transition: width .6s;
 }
 
 .menu__text {
   p {
     margin: 60px 35px;
     line-height: 24px;
+    opacity: 0;
+    transition: opacity .2s;
   }
 }

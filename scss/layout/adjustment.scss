@@ -19,6 +19,7 @@ html {
   height: 100vh;
   background-color: rgba(0,0,0,0.31);
   min-height: 650px;
+  position: relative;
 
   @include phones {
     min-height: 0;
@@ -48,6 +49,7 @@ html {
   font-weight: 500;
   color: #fff;
   transition: .3s;
+  background-color: #e25028;
 }
 
 .section__title {
