@@ -20,6 +20,8 @@
   width: 14px;
   height: 14px;
   margin: 10px 0;
+  cursor: pointer;
+  transition: .5s;
 
   &:before {
     position: absolute;
