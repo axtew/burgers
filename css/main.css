@@ -1075,14 +1075,14 @@ footer {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0; }
+  bottom: 0;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
   @media screen and (max-width: 768px) {
     .accordeon-horizontal {
       max-width: 100%;
-      width: 100%;
-      -webkit-box-pack: end;
-      -ms-flex-pack: end;
-      justify-content: flex-end; } }
+      width: 100%; } }
 
 .menu__item {
   display: -webkit-box;
