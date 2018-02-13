@@ -1,0 +1,73 @@
+.modal {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(47, 50, 52, .92);
+  z-index: 10;
+}
+
+.modal__cont {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  position: absolute;
+  top: 35%;
+  opacity: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include phones {
+    width: 95%;
+  }
+}
+
+.modal__cont {
+  span {
+    display: block;
+    font-family: 'Gagalin', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 28px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    max-width: 420px;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+
+  span {
+    width: 20px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: $orange;
+    transform-origin: left;
+    transition: .5s;
+
+    &:first-child {
+      margin-bottom: 10px;
+      transform: rotate(45deg);
+    }
+
+    &:last-child {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &:hover {
+    span {
+      background-color: darken($orange, 10%);
+    }
+  }
+}

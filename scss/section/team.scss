@@ -32,7 +32,7 @@
   color: #fff;
   font-size: 14px;
   margin-bottom: 20px;
-  transition: .5s;
+  transition: .2s;
   cursor: pointer;
   @include tablets {
     margin-top: 0;
@@ -46,33 +46,26 @@
     margin-bottom: 40px;
 
     .team__preview {
+
       p {
+        color: $yellow;
+
         &:before {
           transform: rotate(180deg);
         }
-
-        color: $yellow;
       }
     }
 
     .team__hidden {
       height: auto;
-      max-height: 2000px;
+      max-height: 400px;
       display: flex;
-      @include tablets {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
+      
     }
   }
 
   &:last-child {
     margin-bottom: 0;
-
-    .team__preview {
-      margin-bottom: 0;
-    }
   }
 }
 
@@ -134,7 +127,13 @@
   overflow: hidden;
   display: flex;
   flex-wrap: nowrap;
-  transition: 1s;
+  transition: .7s;
+
+  @include tablets {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .team__img {

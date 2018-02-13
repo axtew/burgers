@@ -27,6 +27,7 @@
   left: 0;
   right: 0;
   bottom: 0;
+  justify-content: flex-end;
 
   @include tablets {
     max-width: 100%;
@@ -38,23 +39,10 @@
   display: flex;
   cursor: pointer;
 
-  &:first-child {
-    margin-left: auto;
-  }
-
   &:hover {
     .menu__preview {
       color: $yellow;
     }
-    // .menu__hidden {
-    //   width: 20px;
-    //   max-width: 20px;
-    //
-    //   @include tablets {
-    //     width: 0;
-    //     max-width: 0;
-    //   }
-    // }
   }
 
   &--active {
@@ -67,9 +55,6 @@
       right: 0;
       bottom: 0;
       z-index: 10;
-      &+.menu__item {
-        margin-left: auto;
-      }
     }
 
     .menu__preview {
