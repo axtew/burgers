@@ -5,7 +5,6 @@ const right = document.querySelector('.burgers__right-arrow');
 const burgers = $('.burgers__item');
 const burgersLenght = burgers.length;
 const burgersHeight = (burgersLenght - 1) * -100;
-console.log(burgersHeight);
 const sliderStep = 100;
 var currentLeft = 0;
 
