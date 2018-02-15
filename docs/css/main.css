@@ -693,8 +693,10 @@ footer {
     width: 90%; } }
 
 .burgers__photo {
-  position: relative;
-  height: 200px; }
+  position: relative; }
+  @media screen and (max-width: 480px) {
+    .burgers__photo {
+      height: 200px; } }
 
 .calories,
 .composition {
