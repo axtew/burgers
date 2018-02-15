@@ -33,3 +33,7 @@ document.body.addEventListener('touchmove', function(e) {
 $('.intro').on('wheel', '.navigation__list', function(e) {
   e.stopPropagation();
 });
+
+$('.intro').on('touchend', function(e) {
+  e.stopPropagation();
+});
