@@ -2,6 +2,10 @@
 const slider = document.querySelector('.burger__list');
 const left = document.querySelector('.burgers__left-arrow');
 const right = document.querySelector('.burgers__right-arrow');
+const burgers = $('.burgers__item');
+const burgersLenght = burgers.length;
+const burgersHeight = (burgersLenght - 1) * -100;
+console.log(burgersHeight);
 const sliderStep = 100;
 var currentLeft = 0;
 
@@ -10,13 +14,13 @@ left.addEventListener('click', function(e) {
     currentLeft += sliderStep;
     slider.style.left = currentLeft + '%';
   } else {
-    currentLeft = -300;
+    currentLeft = burgersHeight;
     slider.style.left = currentLeft + '%';
   }
 })
 
 right.addEventListener('click', function(e) {
-  if (currentLeft > -300) {
+  if (currentLeft > burgersHeight) {
     currentLeft -= sliderStep;
     slider.style.left = currentLeft + '%';
   } else {

@@ -29,3 +29,7 @@ document.body.addEventListener('touchmove', function(e) {
     e.preventDefault();
   }
 })
+
+$('.intro').on('wheel', '.navigation__list', function(e) {
+  e.stopPropagation();
+});
