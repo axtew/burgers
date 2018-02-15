@@ -34,6 +34,6 @@ $('.intro').on('wheel', '.navigation__list', function(e) {
   e.stopPropagation();
 });
 
-$('.intro').on('touchend', function(e) {
+$('.intro').on('touchend', '.navigation__list', function(e) {
   e.stopPropagation();
 });
