@@ -109,7 +109,10 @@
 
 .burgers__photo {
   position: relative;
-  height: 200px;
+
+  @include phones {
+    height: 200px;
+  }
 }
 
 .calories,
