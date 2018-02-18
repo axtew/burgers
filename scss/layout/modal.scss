@@ -17,6 +17,7 @@
   position: absolute;
   top: 35%;
   opacity: 0;
+  color: #000;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -26,6 +27,10 @@
 }
 
 .modal__cont {
+  &--form {
+    text-align: center;
+  }
+
   span {
     display: block;
     font-family: 'Gagalin', Arial, sans-serif;
@@ -70,4 +75,8 @@
       background-color: darken($orange, 10%);
     }
   }
+}
+
+.modal__close-btn {
+  margin-top: 15px;
 }
