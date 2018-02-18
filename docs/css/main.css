@@ -238,6 +238,7 @@ footer {
   position: absolute;
   top: 35%;
   opacity: 0;
+  color: #000;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -245,6 +246,9 @@ footer {
   @media screen and (max-width: 480px) {
     .modal__cont {
       width: 95%; } }
+
+.modal__cont--form {
+  text-align: center; }
 
 .modal__cont span {
   display: block;
@@ -285,6 +289,9 @@ footer {
       transform: rotate(-45deg); }
   .modal__close:hover span {
     background-color: #bd3d1a; }
+
+.modal__close-btn {
+  margin-top: 15px; }
 
 .header {
   width: 100%;
@@ -1424,7 +1431,8 @@ footer {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-right: 20px; }
+  margin-right: 20px;
+  position: relative; }
   @media screen and (max-width: 480px) {
     .form__input {
       margin-right: 10px; } }
@@ -1561,9 +1569,25 @@ footer {
   .form__btn-reset:hover {
     text-decoration: underline; }
 
-.map {
-  background: url("../img/bg/map-bg.jpg") no-repeat center;
-  background-size: cover; }
+.empty_field {
+  -webkit-box-shadow: 0 0 2px 2px red;
+  box-shadow: 0 0 2px 2px red; }
+
+.empty__content {
+  position: absolute;
+  background-color: #faa;
+  top: -20px;
+  right: 0;
+  white-space: nowrap;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid red;
+  position: absolute;
+  background-color: #faa; }
+
+.map__cont {
+  width: 100%;
+  height: 100%; }
 
 .footer {
   position: absolute;
