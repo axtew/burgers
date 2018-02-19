@@ -759,44 +759,44 @@
       <section class="section form">
         <div class="container form__container">
           <div class="section__title form__title">Закажите доставку</div>
-          <form class="form__inner" action="">
+          <form class="form__inner" action="server.php" method="post" id="order-form">
 
             <div class="form__left">
 
               <div class="form__row">
                 <div class="form__input">
                   <label for="name" class="form__field-title">Имя</label>
-                  <input type="text" id="name" class="form__input-text">
+                  <input type="text" name="name" id="name" class="form__input-text">
                 </div>
                 <div class="form__input">
                   <label for="tel" class="form__field-title">Телефон</label>
-                  <input type="text" id="tel" class="form__input-text">
+                  <input type="text" name="tel" id="tel" class="form__input-text">
                 </div>
               </div>
 
               <div class="form__row">
                 <div class="form__input">
                   <label for="st" class="form__field-title">Улица</label>
-                  <input type="text" id="st" class="form__input-text">
+                  <input type="text" name="street" id="street" class="form__input-text">
                 </div>
               </div>
 
-              <div class="form__row">
+              <div class="form__row" id="num">
                 <div class="form__input">
                   <label for="num_st" class="form__field-title">Дом</label>
-                  <input type="text" id="num_st" class="form__input-text">
+                  <input type="text" name="num-street" id="num-street" class="form__input-text">
                 </div>
                 <div class="form__input">
                   <label for="housing" class="form__field-title">Корпус</label>
-                  <input type="text" id="housing" class="form__input-text">
+                  <input type="text" name="housing" id="housing" class="form__input-text">
                 </div>
                 <div class="form__input">
                   <label for="apartment" class="form__field-title">Квартира</label>
-                  <input type="text" id="apartment" class="form__input-text">
+                  <input type="text" name="apartment" id="apartment" class="form__input-text">
                 </div>
                 <div class="form__input">
                   <label for="floor" class="form__field-title">Этаж</label>
-                  <input type="text" id="floor" class="form__input-text">
+                  <input type="text" name="floor" id="floor" class="form__input-text">
                 </div>
               </div>
 
@@ -807,7 +807,7 @@
               <div class="form__row form__row--textarea">
                 <div class="form__input">
                   <label for="comment" class="form__field-title">Комментарий</label>
-                  <textarea id="comment" class="form__input-text form__textarea"></textarea>
+                  <textarea name="comment" id="comment" class="form__input-text form__textarea"></textarea>
                 </div>
               </div>
 
@@ -816,14 +816,14 @@
                 <div class="form__controls">
                   <div class="form__controls-trigger">
                     <label for="cash" class="radio__label">
-                      <input type="radio" name="photo" id="cash" class="radio form__radio">
+                      <input type="radio" name="pay" id="cash" class="radio form__radio" value="наличными" checked>
                       <span class="radio__styled"></span>
                       <span class="radio__text">Потребуется сдача</span>
                     </label>
                   </div>
                   <div class="form__controls-trigger">
                     <label for="card" class="radio__label">
-                      <input type="radio" name="photo" id="card" class="radio form__radio">
+                      <input type="radio" name="pay" id="card" class="radio form__radio" value="картой">
                       <span class="radio__styled"></span>
                       <span class="radio__text">Оплата по карте</span>
                     </label>
@@ -836,7 +836,7 @@
               <div class="form__row form__row--check">
                 <div class="form__check">
                   <label for="check" class="check__label">
-                    <input type="checkbox" id="check" class="checkbox form__checkbox"></input>
+                    <input type="checkbox" name="check" id="check" class="checkbox form__checkbox" value="1"></input>
                     <span class="checkbox__styled"></span>
                     <span class="checkbox__text">Не перезванивать</span>
                   </label>
@@ -845,7 +845,7 @@
 
               <div class="form__row form__row--buttons">
                 <div class="form__btn">
-                  <button class="btn form__btn-send" type="button" name="button">Заказать</button>
+                  <button class="btn form__btn-send" type="submit" name="button">Заказать</button>
                 </div>
                 <div class="form__btn">
                   <button class="form__btn-reset" type="reset" name="button">Очистить</button>
@@ -858,11 +858,44 @@
 
         </div>
 
+        <script type="template" id="error">
+        <div class="modal__cont modal__cont--form">
+          <div class="modal__content">
+            <p>Сообщение не отправлено!<br>Проблема на сервере!</p>
+          </div>
+          <div class="modal__close-btn">
+            <button class="btn modal__btn" type="submit" name="button">Закрыть</button>
+          </div>
+        </div>
+        </script>
+
+        <script type="template" id="success">
+          <div class="modal__cont modal__cont--form">
+            <div class="modal__content">
+              <p>Сообщение отправлено!</p>
+            </div>
+            <div class="modal__close-btn">
+              <button class="btn modal__btn" type="submit" name="button">Закрыть</button>
+            </div>
+          </div>
+        </script>
+
+        <script type="template" id="empty">
+          <div class="modal__cont modal__cont--form">
+            <div class="modal__content">
+              <p>Сообщение не отправлено!<br>Заполните поля!</p>
+            </div>
+            <div class="modal__close-btn">
+              <button class="btn modal__btn" type="submit" name="button">Закрыть</button>
+            </div>
+          </div>
+        </script>
+
       </section>
 
       <section class="section map">
 
-        <div class="map__cont"></div>
+        <div class="map__cont" id="map__cont"></div>
 
         <footer class="footer">
           <div class="container footer__container">
@@ -908,12 +941,17 @@
   </aside>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/maskedinput/jquery.maskedinput.min.js"></script>
   <script src="js/one-page-scroll.js"></script>
   <script src="js/hamburger-menu.js"></script>
   <script src="js/slider.js"></script>
   <script src="js/team-acco.js"></script>
   <script src="js/menu-acco.js"></script>
   <script src="js/modal.js"></script>
+  <script src="js/modal-reviews.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script src="js/map.js"></script>
+  <script src="js/form.js"></script>
 
 </body>
 </html>
