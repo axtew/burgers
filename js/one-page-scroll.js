@@ -89,9 +89,24 @@ $('.header__btn-link').on('click', function(e) {
 })
 
 var touchStartY;
+var computedStyle = getComputedStyle(ops);
+var parseStyle;
 dnd.on('touchstart', function(e) {
   for (var i = 0; i < e.changedTouches.length; i++) {
     touchStartY = e.changedTouches[i].pageY;
+  }
+  parseStyle = parseInt(computedStyle.top);
+});
+
+var touchMoveY;
+dnd.on('touchmove', function(e) {
+  for (var i = 0; i < e.changedTouches.length; i++) {
+    touchMoveY = e.changedTouches[i].pageY;
+    pixels = touchMoveY - touchStartY;
+
+    if ((pixels < 0 && parseInt(ops.style.top) <= 0) || parseInt(ops.style.top) < 0) {
+      ops.style.top = parseStyle + pixels + 'px';
+    }
   }
 });
 
@@ -103,11 +118,13 @@ dnd.on('touchend', function(e) {
 
   if ((touchStartY > touchEndY) && (currentTop > sectionsHeight)) {
     currentTop -= step;
-    ops.style.top = currentTop + 'vh';
   }
 
   if ((touchStartY < touchEndY) && (currentTop < 0)) {
     currentTop += step;
-    ops.style.top = currentTop + 'vh';
   }
+
+  $(ops).animate({
+    'top' :  currentTop + 'vh'
+  }, 500)
 });
